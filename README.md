@@ -7,6 +7,8 @@
 
 Create slugs for Eloquent models based on title and ID
 
+Compatible with Laravel 8, Laravel 9
+
 ```php
 $model = new Blog();
 $model->title = 'Dwight jumped over the fence';
