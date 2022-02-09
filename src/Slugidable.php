@@ -18,6 +18,7 @@ trait Slugidable
             'using_key_name' => $this->getKeyName(),
             'on' => 'suffix',
             'using_separator' => '-',
+            'force_slug_from' => false,
         ];
     }
 
@@ -53,7 +54,7 @@ trait Slugidable
                 $preffered_slug = $slug_from;
             } elseif (Str::startsWith($slug_to, ':t') !== false) {
                 $preffered_slug = substr($slug_to, 2);
-            } elseif ($slug_to) {
+            } elseif ($this->slugidableSettings['force_slug_from'] === false && $slug_to) {
                 $preffered_slug = $slug_to;
             } else {
                 $preffered_slug = $slug_from;

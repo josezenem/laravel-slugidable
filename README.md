@@ -75,6 +75,7 @@ protected function configureSlugidableSettings():void
         'using_key_name' => $this->getKeyName(),
         'on' => 'suffix',
         'using_separator' => '-',
+        'force_slug_from' => false,
     ];
 }
 ```
@@ -83,6 +84,7 @@ protected function configureSlugidableSettings():void
 * **using_key_name** the ID field used to prefix or suffix the ID
 * **on** could be "prefix" to have the ID before the slug text, or "suffix" to have it after.
 * **using_separator** the seperator to use during slug creation
+* **force_slug_from** force the system to always slug from 'slug_from' regardless if `slug_to` is present
 
 
 ## Testing
