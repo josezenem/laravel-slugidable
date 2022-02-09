@@ -4,7 +4,6 @@ use Illuminate\Support\Str;
 use Josezenem\Slugidable\Tests\Dummy\Blog;
 
 it('can use custom slug during create', function () {
-
     $custom_slug = 'i am a custom slug';
 
     $model = Blog::create(['title' => 'hello', 'slug' => $custom_slug]);
@@ -13,7 +12,6 @@ it('can use custom slug during create', function () {
 });
 
 it('create custom slug if no slug is present', function () {
-
     $title = 'i am a title';
 
     $model = Blog::create(['title' => $title]);
@@ -22,7 +20,6 @@ it('create custom slug if no slug is present', function () {
 });
 
 it('can find model from slugidable', function () {
-
     $title = 'find this article based on an id';
     $another_title = 'Another articled based on an ID';
 
@@ -35,5 +32,4 @@ it('can find model from slugidable', function () {
     expect($find_blog1->count())->toEqual(1);
 
     expect($find_blog2->slug)->toBe($blog2->slug);
-
 });
