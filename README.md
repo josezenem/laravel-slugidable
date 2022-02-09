@@ -1,4 +1,4 @@
-# Laravel Model Trait Slugidable
+# Slugidable Generate slugs based on title and ID
 
 [![Latest Stable Version](http://poser.pugx.org/josezenem/laravel-slugidable/v)](https://packagist.org/packages/josezenem/laravel-slugidable)
 [![Tests](https://github.com/josezenem/laravel-slugidable/actions/workflows/run-tests.yml/badge.svg?branch=main)](https://github.com/josezenem/laravel-slugidable/actions/workflows/run-tests.yml)
