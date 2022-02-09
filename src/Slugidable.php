@@ -64,7 +64,7 @@ trait Slugidable
             } else {
                 $slug = Str::finish(Str::slug($preffered_slug, $this->slugidableSettings['using_separator']), $this->slugidableSettings['using_separator'] . $this->getAttribute($using_key_name));
             }
-        } elseif ($slug_to) {
+        } elseif ($this->slugidableSettings['force_slug_from'] === false && $slug_to) {
             $slug = ':t' . $slug_to;
         } else {
             $slug = ':u' . Str::uuid()->toString();
