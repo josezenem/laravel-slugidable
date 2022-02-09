@@ -1,11 +1,14 @@
 # Laravel Model Trait Slugidable
 
-This will allow you to create slugs with the ID as part of the slug.  It will utilize the "title" if no slug is passed, or use the slug if one is set during your create.
+Create slugs for Eloquent models based on title and ID
 
-For example: domain.com/my-dog-dwight-jumped-over-the-fence-012422
+```php
+$model = new Blog();
+$model->title = 'Dwight jumped over the fence';
+$model->save();
 
-* **my-dog-dwight-jumped-over-the-fence** being the string
-* **012422** being the ID
+echo $model->slug; // output: dwight-jumped-over-the-fence-012422
+```
 
 All settings are fully configurable for each model.
 
