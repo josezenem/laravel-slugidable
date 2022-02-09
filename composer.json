@@ -54,16 +54,6 @@
             "phpstan/extension-installer": true
         }
     },
-    "extra": {
-        "laravel": {
-            "providers": [
-                "Josezenem\\Slugidable\\SlugidableServiceProvider"
-            ],
-            "aliases": {
-                "Slugidable": "Josezenem\\Slugidable\\Facades\\Slugidable"
-            }
-        }
-    },
     "minimum-stability": "dev",
     "prefer-stable": true
 }
