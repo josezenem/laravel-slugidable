@@ -23,7 +23,6 @@
         "illuminate/support": "^8.0|^9.0"
     },
     "require-dev": {
-        "nunomaduro/collision": "^5.10",
         "nunomaduro/larastan": "^1.0",
         "orchestra/testbench": "6.23|^7.0",
         "pestphp/pest": "^1.21",
