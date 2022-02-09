@@ -5,7 +5,7 @@
 [![Codacy Badge](https://app.codacy.com/project/badge/Grade/0a99e65b8c004592b411bee8710fba1a)](https://www.codacy.com/gh/josezenem/laravel-slugidable/dashboard?utm_source=github.com&amp;utm_medium=referral&amp;utm_content=josezenem/laravel-slugidable&amp;utm_campaign=Badge_Grade)
 [![Total Downloads](https://img.shields.io/packagist/dt/josezenem/laravel-slugidable.svg?style=flat-square)](https://packagist.org/packages/josezenem/laravel-slugidable)
 
-Create slugs for Eloquent models based on title and ID
+A package for Laravel that creates slugs for Eloquent models based on title and ID
 
 Compatible with Laravel 8, Laravel 9
 

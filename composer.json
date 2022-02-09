@@ -1,6 +1,6 @@
 {
     "name": "josezenem/laravel-slugidable",
-    "description": "A package for Laravel that will allow you to create slugs that add the model ID as part of the slug.",
+    "description": "A package for Laravel that creates slugs for Eloquent models based on title and ID",
     "keywords": [
         "josezenem",
         "laravel",
