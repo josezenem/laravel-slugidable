@@ -1,10 +1,12 @@
 {
     "name": "josezenem/laravel-slugidable",
-    "description": "This is my package laravel-slugidable",
+    "description": "A package for Laravel that will allow you to create slugs that add the model ID as part of the slug.",
     "keywords": [
         "josezenem",
         "laravel",
-        "laravel-slugidable"
+        "laravel-slugidable",
+        "models",
+        "php"
     ],
     "homepage": "https://github.com/josezenem/laravel-slugidable",
     "license": "MIT",
