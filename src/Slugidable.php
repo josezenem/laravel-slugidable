@@ -10,7 +10,7 @@ trait Slugidable
 {
     protected array $slugidableSettings = [];
 
-    protected function configureSlugidableSettings():void
+    protected function configureSlugidableSettings(): void
     {
         $this->slugidableSettings = [
             'slug_from' => 'title',
@@ -32,9 +32,8 @@ trait Slugidable
             $model->slug = $model->getSlugidableSlug();
         });
 
-        static::saved(function($model) {
-            if(Str::startsWith($model->slug, [':t', ':u']))
-            {
+        static::saved(function ($model) {
+            if (Str::startsWith($model->slug, [':t', ':u'])) {
                 $model->updateQuietly(['slug' => $model->getSlugidableSlug()]);
             }
         });
@@ -49,35 +48,23 @@ trait Slugidable
         $slug_to = $this->getAttribute($this->slugidableSettings['slug_to']);
         $slug_from = $this->getAttribute($this->slugidableSettings['slug_from']);
 
-        if($this->getAttribute($using_key_name))
-        {
-            if(Str::startsWith($slug_to, ':u') !== false)
-            {
+        if ($this->getAttribute($using_key_name)) {
+            if (Str::startsWith($slug_to, ':u') !== false) {
                 $preffered_slug = $slug_from;
-            }
-            else if(Str::startsWith($slug_to, ':t') !== false) {
+            } elseif (Str::startsWith($slug_to, ':t') !== false) {
                 $preffered_slug = substr($slug_to, 2);
-            }
-            else
-            {
+            } else {
                 $preffered_slug = $slug_from;
             }
 
-            if($this->slugidableSettings['on'] === 'prefix')
-            {
+            if ($this->slugidableSettings['on'] === 'prefix') {
                 $slug = Str::start(Str::slug($preffered_slug, $this->slugidableSettings['using_separator']), $this->getAttribute($using_key_name) . $this->slugidableSettings['using_separator']);
-            }
-            else
-            {
+            } else {
                 $slug = Str::finish(Str::slug($preffered_slug, $this->slugidableSettings['using_separator']), $this->slugidableSettings['using_separator'] . $this->getAttribute($using_key_name));
             }
-        }
-        elseif($slug_to)
-        {
+        } elseif ($slug_to) {
             $slug = ':t' . $slug_to;
-        }
-        else
-        {
+        } else {
             $slug = ':u' . Str::uuid()->toString();
         }
 
@@ -95,12 +82,9 @@ trait Slugidable
     {
         $this->configureSlugidableSettings();
 
-        if($this->slugidableSettings['using_separator'] === 'prefix')
-        {
+        if ($this->slugidableSettings['using_separator'] === 'prefix') {
             $slug_id = strstr($slug, $this->slugidableSettings['using_separator'], true);
-        }
-        else
-        {
+        } else {
             $slug_id = substr(strrchr($slug, $this->slugidableSettings['using_separator']), 1);
         }
 
