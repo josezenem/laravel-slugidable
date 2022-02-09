@@ -53,10 +53,11 @@ trait Slugidable
                 $preffered_slug = $slug_from;
             } elseif (Str::startsWith($slug_to, ':t') !== false) {
                 $preffered_slug = substr($slug_to, 2);
+            } elseif ($slug_to){
+                $preffered_slug = $slug_to;
             } else {
                 $preffered_slug = $slug_from;
             }
-
             if ($this->slugidableSettings['on'] === 'prefix') {
                 $slug = Str::start(Str::slug($preffered_slug, $this->slugidableSettings['using_separator']), $this->getAttribute($using_key_name) . $this->slugidableSettings['using_separator']);
             } else {
