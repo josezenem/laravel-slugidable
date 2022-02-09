@@ -1,4 +1,4 @@
-# This is my package laravel-slugidable
+# Laravel Model Trait Slugidable
 
 This will allow you to create slugs with the ID as part of the slug.  It will utilize the "title" if no slug is passed, or use the slug if one is set during your create.
 
