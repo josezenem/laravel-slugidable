@@ -35,7 +35,6 @@ class Blog extends Model {
     ];
 }
 
-
 $blog = create([
     'title' => 'My dog Dwight jumped over the fence',
 ])
