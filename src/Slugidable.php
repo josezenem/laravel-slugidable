@@ -53,7 +53,7 @@ trait Slugidable
                 $preffered_slug = $slug_from;
             } elseif (Str::startsWith($slug_to, ':t') !== false) {
                 $preffered_slug = substr($slug_to, 2);
-            } elseif ($slug_to){
+            } elseif ($slug_to) {
                 $preffered_slug = $slug_to;
             } else {
                 $preffered_slug = $slug_from;
