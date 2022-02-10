@@ -85,9 +85,9 @@ trait Slugidable
         $this->configureSlugidableSettings();
 
         if ($this->slugidableSettings['using_separator'] === 'prefix') {
-            $slug_id = strstr($slug, $this->slugidableSettings['using_separator'], true);
+            $slug_id = Str::before($slug, $this->slugidableSettings['using_separator']);
         } else {
-            $slug_id = substr(strrchr($slug, $this->slugidableSettings['using_separator']), 1);
+            $slug_id = Str::afterLast($slug, $this->slugidableSettings['using_separator']);
         }
 
         $query->where($this->slugidableSettings['using_key_name'], $slug_id);
