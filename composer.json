@@ -5,6 +5,8 @@
         "josezenem",
         "laravel",
         "laravel-slugidable",
+        "slugidable",
+        "sluggable",
         "models",
         "php"
     ],
