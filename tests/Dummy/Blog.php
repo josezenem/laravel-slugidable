@@ -3,11 +3,11 @@
 namespace Josezenem\Slugidable\Tests\Dummy;
 
 use Illuminate\Database\Eloquent\Model;
-use Josezenem\Slugidable\Slugidable;
+use Josezenem\Slugidable\HasSlugidable;
 
 class Blog extends Model
 {
-    use Slugidable;
+    use HasSlugidable;
 
     protected $fillable = [
         'title',

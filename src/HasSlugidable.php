@@ -6,9 +6,22 @@ use Illuminate\Database\Eloquent\Builder;
 use Illuminate\Support\Str;
 use Ramsey\Uuid\UuidInterface;
 
-trait Slugidable
+trait HasSlugidable
 {
     protected array $slugidableSettings = [];
+    protected array $userSlugidableSettings = [];
+
+    protected function defaultSlugidableSettings()
+    {
+        $this->slugidableSettings = [
+            'slug_from' => 'title',
+            'slug_to' => 'slug',
+            'using_key_name' => $this->getKeyName(),
+            'on' => 'suffix',
+            'using_separator' => '-',
+            'force_slug_from' => false,
+        ];
+    }
 
     protected function configureSlugidableSettings(): void
     {
@@ -27,7 +40,7 @@ trait Slugidable
      *
      * @return void
      */
-    protected static function bootSlugidable()
+    protected static function bootHasSlugidable()
     {
         static::saving(function ($model) {
             $model->slug = $model->getSlugidableSlug();

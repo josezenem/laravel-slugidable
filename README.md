@@ -30,14 +30,15 @@ composer require josezenem/laravel-slugidable
 ## Usage
 
 Simply `Josezenem\Slugidable\Slugidable` trait to your model.
+
 ```php
 // App\Models\Blog
 <?php
 
-use Josezenem\Slugidable\Slugidable;
+use Josezenem\Slugidable\HasSlugidable;
 
 class Blog extends Model {
-    use Slugidable;
+    use HasSlugidable;
     
     protected $fillable = [
         'title',
