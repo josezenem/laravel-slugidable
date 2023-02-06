@@ -6,7 +6,7 @@
 
 A package for Laravel that creates slugs for Eloquent models based on both a title and ID
 
-Compatible with Laravel 8, Laravel 9
+Compatible with Laravel 8, Laravel 9, and Laravel 10
 
 ```php
 $model = new Blog();
