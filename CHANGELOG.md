@@ -2,6 +2,10 @@
 
 All notable changes to `laravel-slugidable` will be documented in this file.
 
+## 1.2.0 - 2024-03-12
+
+- Updated to Laravel 11
+
 ## 1.1.1 - 2023-02-06
 
 - Laravel 10 Update
