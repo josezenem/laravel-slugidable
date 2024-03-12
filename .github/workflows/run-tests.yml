@@ -19,10 +19,13 @@ jobs:
         include:
           - laravel: 9.*
             testbench: ^7.0
+            database: ^9.0
           - laravel: 10.*
             testbench: ^8.0
+            database: ^10.0
           - laravel: 11.*
             testbench: ^9.0
+            database: ^11.0
         exclude:
           - laravel: 10.*
             php: 8.0
